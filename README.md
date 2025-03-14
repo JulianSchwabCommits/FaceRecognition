@@ -1,4 +1,4 @@
-### README: Face Recognition with DeepFace and OpenCV
+## Face Recognition with DeepFace and OpenCV
 
 #### **Overview**
 This script performs real-time face recognition using OpenCV and DeepFace. It captures video from your webcam, compares the detected face to a reference image, and displays appropriate messages based on whether the face is found and if it matches the reference.
@@ -12,37 +12,39 @@ This script performs real-time face recognition using OpenCV and DeepFace. It ca
 1. **Install Anaconda (if not already installed)**
    - Download and install [Anaconda](https://www.anaconda.com/products/individual) for Python 3.10.
 
-2. **Create a Conda Environment**
-   Create a Conda environment with Python 3.10 using the following command:
-   ```bash
-   conda create -n FaceRec python=3.10
-   ```
-   
-3. **Activate the Environment**
-   Activate your environment:
-   ```bash
-   conda activate FaceRec
-   ```
+2. **Create a Conda Environment Using `environment.yml`**
+   - Clone or download this project to your local machine.
+   - In the project directory, there is an `environment.yml` file, which contains all the necessary dependencies for the script.
+   - Create the Conda environment by running:
+     ```bash
+     conda env create -f environment.yml
+     ```
 
-4. **Install Dependencies**
-   Use `pip` to install **DeepFace** and **OpenCV**:
-   ```bash
-   pip install deepface opencv-python
-   ```
+3. **Activate the Environment**
+   - Once the environment is created, activate it:
+     ```bash
+     conda activate FaceRec
+     ```
+
+4. **Install Additional Dependencies (if needed)**
+   - In case `DeepFace` or `OpenCV` is missing, you can manually install the necessary dependencies with:
+     ```bash
+     pip install deepface opencv-python
+     ```
 
 5. **Prepare Reference Image**
-   Place the reference image (the one you want to compare against) in your project directory and update the `reference_img` path in the code:
-   ```python
-   reference_img = cv2.imread("path_to_your_image.jpg")
-   ```
+   - Place the reference image (the one you want to compare against) in your project directory and update the `reference_img` path in the code:
+     ```python
+     reference_img = cv2.imread("path_to_your_image.jpg")
+     ```
 
 6. **Run the Script**
-   Run the script:
-   ```bash
-   python face_recognition.py
-   ```
+   - Run the script:
+     ```bash
+     python face_recognition.py
+     ```
 
-   The webcam will start capturing, and the script will analyze each frame to see if the face matches the reference.
+   - The webcam will start capturing, and the script will analyze each frame to see if the face matches the reference.
 
 #### **How it Works**
 
@@ -72,6 +74,3 @@ This script performs real-time face recognition using OpenCV and DeepFace. It ca
 - [DeepFace Documentation](https://pypi.org/project/deepface/)
 - [OpenCV Documentation](https://pypi.org/project/opencv-python/)
 
----
-
-This README provides the basic setup and explanation of how the face recognition script works with DeepFace and OpenCV. Let me know if you need further assistance!
